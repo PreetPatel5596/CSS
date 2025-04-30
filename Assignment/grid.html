@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        margin: 0 0 10px;
+      }
+
+      .card-price {
+        font-size: 1rem;
+        color: green;
+        font-weight: bold;
+      }
+
+      @media (max-width: 900px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="card">
+        <img
+          src="https://cdn.mos.cms.futurecdn.net/kbrdKHwjXBwSp9uiY8hejP-1200-80.jpg"
+          alt="Product 1"
+        />
+        <div class="card-content">
+          <h3 class="card-title">Headphone</h3>
+          <p class="card-price">₹3500</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://www.apple.com/newsroom/images/2023/10/apple-unveils-new-macbook-pro-featuring-m3-chips/article/Apple-MacBook-Pro-2up-231030_Full-Bleed-Image.jpg.large.jpg"
+          alt="Product 2"
+        />
+        <div class="card-content">
+          <h3 class="card-title">MacBook Pro</h3>
+          <p class="card-price">₹150000</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.macrumors.com/t/OGS-wMpuHXbX6VkpJd6urJH1rEg=/1600x0/article-new/2023/09/iphone-15-pro-gray.jpg"
+          alt="Product 3"
+        />
+        <div class="card-content">
+          <h3 class="card-title">iphone 15 pro</h3>
+          <p class="card-price">₹90000</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-117212730/117212730.jpg"
+          alt="Product 4"
+        />
+        <div class="card-content">
+          <h3 class="card-title">Samsung Tablet</h3>
+          <p class="card-price">₹60000</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FMT_WHH?wid=750&hei=556&fmt=jpeg&qlt=90&.v=1724041668836"
+          alt="Product 5"
+        />
+        <div class="card-content">
+          <h3 class="card-title">Airpods pro</h3>
+          <p class="card-price">₹23000</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.samsung.com/is/image/samsung/assets/in/tvs/2024-tvs-pcd-f02-line-up-02-mo-17-oct-2024.jpg?$720_N_JPG$"
+          alt="Product 6"
+        />
+        <div class="card-content">
+          <h3 class="card-title">Samsung TV</h3>
+          <p class="card-price">₹300000</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
